@@ -4,11 +4,11 @@ from tagadmin import COMMAND_HAND_LER, CONTACT_OWNER
 
 # -- Constants -- #
 DONATE_TEXT = """
-Glad you'd like to donate!
+Rất vui khi bạn muốn đóng góp!
 
-You can donate my Owner by contacting him >>> @{} \
-If you donate, the limit for download limit size \
-of files would increase as he may upgrade the servers!
+Bạn có thể tặng Chủ sở hữu của tôi bằng cách liên hệ với anh ấy >>> @{} \
+Nếu bạn quyên góp, giới hạn cho kích thước giới hạn tải xuống \
+số tệp sẽ tăng lên khi anh ta có thể nâng cấp máy chủ!
 """
 # -- Constants End -- #
 
@@ -25,14 +25,14 @@ async def donate_owner(c: Client, m: Message):
             )
 
             await m.reply_text(
-                "**I've sent you message in your PM!**",
+                "**Tôi đã gửi cho bạn tin nhắn trong PM của bạn!**",
                 parse_mode="markdown",
                 reply_to_message_id=m.message_id,
             )
             return
         except:
             await message.reply_text(
-                "**Contact me in PM first**",
+                "**Liên hệ với tôi trong PM trước**",
                 parse_mode="markdown",
                 reply_to_message_id=m.message_id,
             )
