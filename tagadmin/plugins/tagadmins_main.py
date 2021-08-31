@@ -15,11 +15,11 @@ async def tag_admins(c: Client, m: Message):
         if m.from_user.id in adminslist:
             # Don't work if called by an admin himself and log this!
             LOGGER.info(
-                f"Called by admin: {m.from_user.name} ({m.from_user.id}) in Chat: {m.chat.title} ({m.chat.id})"
+                f"Được gọi bởi quản trị viên:{m.from_user.name} ({m.from_user.id}) trong nhóm {m.chat.title} ({m.chat.id})"
             )
             return
 
-        mentions = "Hey **{}** Admins, look here!"
+        mentions = "Hey **{}**, hãy nhìn vào đây!"
         admin_count = 0
 
         async for a in alladmins:
@@ -31,12 +31,12 @@ async def tag_admins(c: Client, m: Message):
                 mentions += f"[\u2063](tg://user?id={adminid})"
 
         text = mentions.format(admin_count)
-        text += f"\n[{m.from_user.first_name}](tg://user?id={m.from_user.id}) is calling you!"
+        text += f"\n[{m.from_user.first_name}](tg://user?id={m.from_user.id}) đang gọi cho bạn!"
         await m.reply_text(text, parse_mode="markdown")
 
     else:
         await m.reply_text(
-            "`It doesn't work here ¯\_(ツ)_/¯`",
+            "`Nó không hoạt động ở đây ¯\_(ツ)_/¯`",
             parse_mode="markdown",
             reply_to_message_id=m.message_id,
         )
