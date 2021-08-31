@@ -4,8 +4,8 @@ from tagadmin import APP_ID, API_HASH, LOGGER, TG_BOT_TOKEN, TMP_DIR, MESSAGE_DU
 
 
 class TagAdmin(Client):
-    """Start bot using a Class TagAdmin, it will start the bot with TagAdmin().run()
-    Takes values from sample_config.py or config.py file"""
+    """Bắt đầu bot bằng cách sử dụng Class TagAdmin, nó sẽ khởi động bot với TagAdmin().run()
+    Lấy giá trị từ tệp sample_config.py hoặc config.py"""
 
     def __init__(self):
         name = self.__class__.__name__.lower()
@@ -26,17 +26,17 @@ class TagAdmin(Client):
         me = await self.get_me()
         # Show message in LOGGER when bot starts
         LOGGER.info(
-            f"TagAdminsBot based on Pyrogram v{__version__}\n"
-            f"(Layer {layer}) started on @{me.username}"
+            f"TagAdminsBot dựa trên Pyrogram v{__version__}\n"
+            f"(Layer {layer}) bắt đầu vào @{me.username}"
         )
 
         # Send message to MESSAGE_DUMP when bot starts
-        await self.send_message(MESSAGE_DUMP, "<b><i>Bot Started</i></b>")
+        await self.send_message(MESSAGE_DUMP, "<b><i>Bot đã bắt đầu</i></b>")
 
     async def stop(self, *args):
         await super().stop()
         # Show message in LOGGER when bot stops
-        LOGGER.info("TagAdminsBot stopped!\nkthxbye...!")
+        LOGGER.info("TagAdminsBot stopped!...!")
 
 
 if __name__ == "__main__":
