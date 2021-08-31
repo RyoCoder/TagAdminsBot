@@ -6,20 +6,17 @@ from tagadmin import COMMAND_HAND_LER
 START_TEXT = """
 Hey {}
 
-I'm @{}, a simple bot to Tag All Admins in a \
-group easily by typing @admin or @admins
+I'm @{}, một bot đơn giản để gắn thẻ tất cả quản trị viên trong một \
+nhóm dễ dàng bằng cách nhập @admin hoặc @admins
 
-/help - Show help message
-❤️ Source Code - [Github](https://github.com/Skuzzers/TagAdminsBot)
-
-__**Made with ❤️ in India**__
+/help - Hiển thị thông báo trợ giúp
 """
 
 HELP_TEXT = f"""
-{COMMAND_HAND_LER}start - Show Start message.
-{COMMAND_HAND_LER}help - Check this help message.
-{COMMAND_HAND_LER}donate - Get information about donating my owner.
-@admin / @admins - Tag All the admins
+{COMMAND_HAND_LER}start - Hiển thị thông báo Bắt đầu.
+{COMMAND_HAND_LER}help - Kiểm tra thông báo trợ giúp này.
+{COMMAND_HAND_LER}donate - Nhận thông tin về việc ủng hộ cho chủ sở hữu của tôi.
+@admin / @admins - Gắn thẻ tất cả các quản trị viên
 """
 # -- Constants End -- #
 
